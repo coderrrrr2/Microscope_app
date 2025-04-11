@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Microscope Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Microscope Size Calculator</h1>
-  <form method="post">
-    Username: <input type="text" name="username" required><br><br>
-    Microscope Size (mm): <input type="number" step="any" name="microscope_size" required><br><br>
-    Magnification: <input type="number" step="any" name="magnification" required><br><br>
-    <input type="submit" value="Calculate">
-  </form>
-  {% if result %}
-    <h3>{{ result }}</h3>
-  {% endif %}
+  <div class="container">
+    <h1>Microscope Size Calculator</h1>
+    <form method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="microscope_size">Microscope Size (mm):</label>
+      <input type="number" step="any" id="microscope_size" name="microscope_size" required>
+
+      <label for="magnification">Magnification:</label>
+      <input type="number" step="any" id="magnification" name="magnification" required>
+
+      <input type="submit" value="Calculate">
+    </form>
+
+    {% if result %}
+      <div class="result">{{ result }}</div>
+    {% endif %}
+  </div>
 </body>
 </html>

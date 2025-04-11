@@ -38,7 +38,8 @@ label {
     font-size: 15px;
 }
 
-input {
+input[type="text"],
+input[type="number"] {
     padding: 12px;
     margin-top: 6px;
     border-radius: 6px;
@@ -53,7 +54,7 @@ input:focus {
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
 }
 
-button {
+input[type="submit"] {
     margin-top: 25px;
     background-color: #007bff;
     color: white;
@@ -66,7 +67,7 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+input[type="submit"]:hover {
     background-color: #0056b3;
     transform: translateY(-1px);
 }
