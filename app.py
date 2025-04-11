@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 from backend.utils import calculate_actual_size
 from backend.models import save_specimen, create_table
@@ -22,5 +23,7 @@ def index():
         result = f"Actual size: {actual:.2f} mm"
     return render_template("index.html", result=result)
 
+
 if __name__ == "__main__":
-    app.run(debug=False, port=5001)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host="0.0.0.0", port=port)
