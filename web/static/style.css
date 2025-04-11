@@ -56,7 +56,7 @@ input:focus {
 
 input[type="submit"] {
     margin-top: 25px;
-    background-color: #007bff;
+    background-color: #007bff !important;
     color: white;
     border: none;
     padding: 12px;

@@ -6,7 +6,7 @@ from backend.models import save_specimen, create_table
 app = Flask(
     __name__,
     template_folder="web/templates",  # 👈 specify templates folder
-    static_folder="web/templates/static"        # 👈 specify static folder
+    # static_folder="web/static"        # 👈 specify static folder
 )
 
 create_table()
